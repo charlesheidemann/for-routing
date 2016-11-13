@@ -10,7 +10,7 @@ import { HomeComponent } from './user/home.component';
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: 'user', component: UserComponent },
+      { path: 'user/:id', component: UserComponent },
       { path: '', component: HomeComponent },
     ])
   ],
