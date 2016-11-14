@@ -10,12 +10,14 @@ import { Subscription } from 'rxjs/Subscription';
         <button type="button" class="btn btn-default" (click) = "onNavigate()" >Go To Home</button>
         <hr>
         {{ id }}
+        <hr>
+        <router-outlet></router-outlet>
   `,
   styles: []
 })
 export class UserComponent implements OnInit, OnDestroy {
 
-  private id: string;
+  private id: string; 
 
   private idSubscribed: Subscription;
 
@@ -30,7 +32,7 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 
   onNavigate() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/'], { queryParams: { 'analytics': 100 } });
   }
 
 }
