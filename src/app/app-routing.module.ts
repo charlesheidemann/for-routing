@@ -13,7 +13,7 @@ import { USER_ROUTES } from './user/user.routes';
   imports: [
     RouterModule.forRoot([
       { path: 'user/:id', component: UserComponent, pathMatch: 'full' },
-      { path: 'user/:id', component: UserComponent, children: USER_ROUTES, pathMatch: 'full' },
+      { path: 'user/:id', component: UserComponent, children: USER_ROUTES },
       { path: 'user', redirectTo: '/user/1' },
       { path: '', component: HomeComponent },
     ])
