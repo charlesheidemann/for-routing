@@ -11,9 +11,7 @@ import { HomeComponent } from './user/home.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { UserDetailGuard } from './user/user-detail.guard';
-
-
-
+import { UserEditGuard } from './user/user-edit.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +27,7 @@ import { UserDetailGuard } from './user/user-detail.guard';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UserDetailGuard],
+  providers: [UserDetailGuard, UserEditGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
